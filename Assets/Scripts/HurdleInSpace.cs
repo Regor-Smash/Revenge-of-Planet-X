@@ -5,17 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class HurdleInSpace : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float avgMass = 80f;
+
     void Start()
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
-        rb.AddForce(Vector3.left * 2, ForceMode2D.Impulse);
-        rb.AddTorque(Random.Range(-0.7f, 0.7f), ForceMode2D.Impulse);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb.mass = avgMass * Random.Range(0.7f, 1.5f);
+        rb.AddForce(Vector3.left * 3 * avgMass, ForceMode2D.Impulse);
+        rb.AddTorque(Random.Range(-0.7f, 0.7f) * avgMass, ForceMode2D.Impulse);
     }
 }
