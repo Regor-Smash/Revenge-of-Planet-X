@@ -20,6 +20,9 @@ public class PlayerHealth : MassCollision
     float majorDamageThreshold = 0.8f;
     [SerializeField]
     float majorDamageMultiplier = 0.8f;
+
+    [SerializeField]
+    float ExtraLifeHealth = 300;
     #endregion
 
     private float damageInterval = 1f;
@@ -51,9 +54,21 @@ public class PlayerHealth : MassCollision
         }
         else //other is basically your size or bigger
         {
-            Debug.Log("DEATH");
-            gameObject.SetActive(false);
+            if (rb.mass > ExtraLifeHealth)
+            {
+                rb.mass *= 0.5f;
+            }
+            else
+            {
+                Die();
+            }
         }
         lastDamaged = Time.time;
+    }
+
+    private void Die()
+    {
+        Debug.Log("DEATH");
+        gameObject.SetActive(false);
     }
 }

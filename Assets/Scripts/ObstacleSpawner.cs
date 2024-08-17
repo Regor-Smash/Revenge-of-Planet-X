@@ -5,7 +5,7 @@ using UnityEngine;
 public class ObstacleSpawner : MonoBehaviour
 {
     [SerializeField]
-    private GameObject obstacle;
+    private WeightedList obstacles;
 
     private bool spawning = true;
     private Bounds spawnBounds;
@@ -27,6 +27,7 @@ public class ObstacleSpawner : MonoBehaviour
 
     private void SpawnObstacle()
     {
+        GameObject obstacle = obstacles.Choose();
         //Spawns an obstacle somewhere on the bound's vertical center line
         float spawnX = spawnBounds.center.x;//Random.Range(spawnBounds.min.x, spawnBounds.max.x);
         float spawnY = Random.Range(spawnBounds.min.y, spawnBounds.max.y);

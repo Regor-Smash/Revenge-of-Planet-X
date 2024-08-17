@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6565037947540301493}
   - component: {fileID: 4870591489859865533}
   m_Layer: 6
-  m_Name: Danger Block
+  m_Name: Heal Block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6bf2cb60101dfa14c934e6574372f057, type: 3}
-  m_Color: {r: 1, g: 0.49803922, b: 0, a: 1}
+  m_Color: {r: 0.5698112, g: 0.5201872, b: 0.38596648, a: 0.79607844}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -177,9 +177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efcb1d452fed94479713e0a5e2df055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avgMass: 80
-  speed: 3
-  spinSpeed: 0.7
+  avgMass: 30
+  speed: 4
+  spinSpeed: 1
 --- !u!114 &6565037947540301493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d100bac56a3ccf479f445e1f3580327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMass: 500
-  minMass: 40
-  damageThreshold: 0.8
-  damageMultiplier: 0.5
+  maxMass: 60
+  minMass: 10
+  damageThreshold: 1
+  damageMultiplier: 0
