@@ -177,8 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efcb1d452fed94479713e0a5e2df055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avgMass: 80
-  speed: 3
+  avgMass: 120
+  speed: 3.5
   spinSpeed: 0.7
 --- !u!114 &6565037947540301493
 MonoBehaviour:
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d100bac56a3ccf479f445e1f3580327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMass: 500
-  minMass: 40
+  maxMass: 400
+  minMass: 300
   damageThreshold: 0.8
   damageMultiplier: 0.5

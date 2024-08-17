@@ -4974,7 +4974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd18ad25895457145adff77c1713761b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.75
+  speed: 1.6
   massFactor: 2
 --- !u!50 &6040111545316265744
 Rigidbody2D:
@@ -5037,3 +5037,4 @@ MonoBehaviour:
   minorDamageMultiplier: 0.95
   majorDamageThreshold: 0.8
   majorDamageMultiplier: 0.8
+  ExtraLifeHealth: 300

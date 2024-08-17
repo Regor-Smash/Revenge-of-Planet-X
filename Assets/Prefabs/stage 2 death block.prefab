@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6565037947540301493}
   - component: {fileID: 4870591489859865533}
   m_Layer: 6
-  m_Name: Death Block
+  m_Name: stage 2 death block
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -255,8 +255,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2efcb1d452fed94479713e0a5e2df055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  avgMass: 300
-  speed: 2
+  avgMass: 350
+  speed: 2.5
   spinSpeed: 0.3
 --- !u!114 &6565037947540301493
 MonoBehaviour:
@@ -283,6 +283,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMass: 850
-  minMass: 100
+  minMass: 200
   damageThreshold: 2
   damageMultiplier: 0.5
