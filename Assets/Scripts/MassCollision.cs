@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Collider2D))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class MassCollision : MonoBehaviour
 {
@@ -7,6 +8,13 @@ public class MassCollision : MonoBehaviour
 
     [SerializeField]
     protected float maxMass = 500f;
+    [SerializeField]
+    protected float minMass = 40f;
+
+    [SerializeField]
+    private float damageThreshold = 0.8f;
+    [SerializeField]
+    private float damageMultiplier = 0.5f;
 
     private void Start()
     {
@@ -16,14 +24,29 @@ public class MassCollision : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         //The object that this script is on is colission.otherRigidbody
-        if (collision.rigidbody != null)
+        Rigidbody2D colRb = collision.rigidbody;
+        if (colRb != null && colRb.mass  < rb.mass)
         {
-            ChangeMass(collision.rigidbody.mass);
+            MassCollision mc = colRb.GetComponent<MassCollision>();
+            if (mc != null)
+            {
+                float m = colRb.mass;
+                mc.ChangeMass(rb.mass);
+                ChangeMass(m);
+            }
         }
     }
 
     protected virtual void ChangeMass(float otherMass)
     {
-        rb.mass *= 0.9f;
+        if (otherMass / rb.mass < damageThreshold)
+            rb.mass *= 0.9f;
+        else
+            rb.mass *= damageMultiplier;
+
+        if(rb.mass < minMass)
+        {
+            Destroy(gameObject);
+        }
     }
 }
