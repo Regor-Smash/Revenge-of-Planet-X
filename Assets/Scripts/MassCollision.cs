@@ -5,6 +5,9 @@ public class MassCollision : MonoBehaviour
 {
     protected Rigidbody2D rb;
 
+    [SerializeField]
+    protected float maxMass = 500f;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -21,6 +24,6 @@ public class MassCollision : MonoBehaviour
 
     protected virtual void ChangeMass(float otherMass)
     {
-        rb.mass = rb.mass * 0.9f;
+        rb.mass *= 0.9f;
     }
 }

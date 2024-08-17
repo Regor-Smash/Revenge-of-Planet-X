@@ -4,6 +4,24 @@ using UnityEngine;
 public class PlayerHealth : MassCollision
 {
     //Health is tracked as the mass of the player
+
+    #region Variables
+    [SerializeField]
+    float healThreshold = 0.25f;
+    [SerializeField]
+    float healMultiplier = 1.1f;
+
+    [SerializeField]
+    float minorDamageThreshold = 0.5f;
+    [SerializeField]
+    float minorDamageMultiplier = 0.95f;
+
+    [SerializeField]
+    float majorDamageThreshold = 0.8f;
+    [SerializeField]
+    float majorDamageMultiplier = 0.8f;
+    #endregion
+
     private float damageInterval = 1f;
     private float lastDamaged = 0f;
     private float nextDamage { get { return lastDamaged + damageInterval; } }
@@ -16,17 +34,20 @@ public class PlayerHealth : MassCollision
         }
 
         float massRatio = otherMass / rb.mass;
-        if(massRatio < 0.25f)
+        if (massRatio < healThreshold)
         {
-            rb.mass *= 1.1f;
+            if (rb.mass * healMultiplier < maxMass)
+            {
+                rb.mass *= healMultiplier;
+            }
         }
-        else if(massRatio < 0.5f)
+        else if(massRatio < minorDamageThreshold)
         {
-            rb.mass *= 0.95f;
+            rb.mass *= minorDamageMultiplier;
         }
-        else if(massRatio < 0.8f)
+        else if(massRatio < majorDamageThreshold)
         {
-            rb.mass *= 0.8f;
+            rb.mass *= majorDamageMultiplier;
         }
         else //other is basically your size or bigger
         {

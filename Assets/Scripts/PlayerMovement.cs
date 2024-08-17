@@ -7,6 +7,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField]
     private float speed = 0.75f;
+    [SerializeField]
+    private float massFactor = 2f;
 
     private float startMass;
     private Rigidbody2D rb;
@@ -25,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     private void Move(float axis)
     {
         //F = m a. I supply F.
-        float massFactor = startMass * startMass / rb.mass;
+        float massMult = Mathf.Pow(startMass/rb.mass, Mathf.Clamp(massFactor, 0, 100)) * rb.mass; //startMass * startMass / rb.mass;
         // a = speed * (startMass/ mass)^2
-        rb.AddForce(new Vector2(0, axis * speed * massFactor), ForceMode2D.Force);
+        rb.AddForce(new Vector2(0, axis * speed * massMult), ForceMode2D.Force);
     }
 }
