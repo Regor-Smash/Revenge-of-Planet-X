@@ -225,19 +225,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 750
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7556375962304838829, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_Pivot.x
@@ -349,11 +349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -583,7 +583,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   obstacles:
     elements:
-    - weight: 3
+    - weight: 2
       element: {fileID: 5779164257008511540, guid: 8c11853798e7c9d429e70cb639c1bf05, type: 3}
     - weight: 2
       element: {fileID: 5779164257008511540, guid: 02303e4c09394d2458a5c362c9d60d1d, type: 3}
