@@ -215,19 +215,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 750
       objectReference: {fileID: 0}
     - target: {fileID: 7556375962304838829, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_Pivot.x
@@ -339,11 +339,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -672,9 +672,9 @@ MonoBehaviour:
     elements:
     - weight: 1
       element: {fileID: 5779164257008511540, guid: 84b44c8ae2e5a8444a073b828826f78c, type: 3}
-    - weight: 1
-      element: {fileID: 5779164257008511540, guid: d5bf422f1f649e946a12a725e99d24ed, type: 3}
     - weight: 2
+      element: {fileID: 5779164257008511540, guid: d5bf422f1f649e946a12a725e99d24ed, type: 3}
+    - weight: 3
       element: {fileID: 5779164257008511540, guid: 7a5830db641a8064eb64592ab6b40239, type: 3}
     - weight: 5
       element: {fileID: 5779164257008511540, guid: 5c90c377af042cf46989c8b24c28429d, type: 3}
