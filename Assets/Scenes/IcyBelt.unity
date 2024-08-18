@@ -225,15 +225,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3014457166715038237, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_LocalPosition.x
@@ -353,11 +353,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8908653893392204094, guid: 5536cd0d870c1174c884489fd51d5228, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -946,18 +946,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &1271948677
 MonoBehaviour:
-=======
---- !u!1 &1413512642
-GameObject:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1271948674}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -967,7 +961,12 @@ GameObject:
   loop: 1
   referenceSpeed: {fileID: 229855400767693793, guid: 8c11853798e7c9d429e70cb639c1bf05, type: 3}
   parallaxFactor: 0.1
-=======
+--- !u!1 &1413512642
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1413512644}
@@ -1091,7 +1090,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1476890408
 GameObject:
   m_ObjectHideFlags: 0
@@ -1417,18 +1415,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
 --- !u!114 &1554536046
 MonoBehaviour:
-=======
---- !u!1 &1757372615
-GameObject:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1554536043}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1438,7 +1430,12 @@ GameObject:
   loop: 1
   referenceSpeed: {fileID: 229855400767693793, guid: 8c11853798e7c9d429e70cb639c1bf05, type: 3}
   parallaxFactor: 0.1
-=======
+--- !u!1 &1757372615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1757372617}
@@ -1562,7 +1559,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &1777430464
 GameObject:
   m_ObjectHideFlags: 0
@@ -1710,9 +1706,6 @@ SceneRoots:
   - {fileID: 1777430466}
   - {fileID: 1554536045}
   - {fileID: 1271948676}
-<<<<<<< Updated upstream
   - {fileID: 1524885685}
-=======
   - {fileID: 1757372617}
   - {fileID: 1413512644}
->>>>>>> Stashed changes
