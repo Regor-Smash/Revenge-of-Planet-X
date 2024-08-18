@@ -11,11 +11,15 @@ public class HurdleInSpace : MonoBehaviour
     [SerializeField]
     private float spinSpeed = 0.7f;
 
+    private Rigidbody2D rb;
+
     void Start()
     {
-        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         rb.mass = avgMass * Random.Range(0.7f, 1.5f);
         rb.AddForce(Vector3.left * speed * avgMass, ForceMode2D.Impulse);
         rb.AddTorque(Random.Range(-spinSpeed, spinSpeed) * avgMass, ForceMode2D.Impulse);
     }
+
+    public float StartSpeed { get { return speed; } }
 }

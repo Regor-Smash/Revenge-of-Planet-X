@@ -4800,7 +4800,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4843,8 +4843,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4929671358943998952}
   - component: {fileID: 4943668017597557861}
-  - component: {fileID: 165876348002906411}
-  - component: {fileID: 4405207999351991519}
+  - component: {fileID: 6147095722308435285}
   - component: {fileID: 110628423448294274}
   - component: {fileID: 6040111545316265744}
   - component: {fileID: 1748220830081919248}
@@ -4927,7 +4926,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!70 &165876348002906411
+--- !u!70 &6147095722308435285
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4961,8 +4960,9 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.013629913, y: -0.0077884197}
-  m_Radius: 0.5954075
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1.228125, y: 0.975}
+  m_Direction: 1
 --- !u!114 &110628423448294274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5016,6 +5016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9f31ab1d96c6a42867e6d6734240f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  defaultMass: 100
 --- !u!114 &7910704814028880905
 MonoBehaviour:
   m_ObjectHideFlags: 0
