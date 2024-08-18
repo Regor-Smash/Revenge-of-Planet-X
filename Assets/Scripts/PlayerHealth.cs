@@ -140,6 +140,6 @@ public class PlayerHealth : MassCollision
     {
         deadSound.Play();
         Debug.Log("DEATH");
-        gameObject.SetActive(false);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Lose");
     }
 }
