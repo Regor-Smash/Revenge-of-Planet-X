@@ -36,6 +36,15 @@ public class PlayerHealth : MassCollision
     private float lastDamaged = 0f;
     private float nextDamage { get { return lastDamaged + damageInterval; } }
 
+    #region SFX
+    [SerializeField]
+    private AudioSource healSound;
+    [SerializeField]
+    private AudioSource hurtSound;
+    [SerializeField]
+    private AudioSource deadSound;
+    #endregion
+
     private new void Start()
     {
         base.Start();
@@ -70,15 +79,18 @@ public class PlayerHealth : MassCollision
             if (rb.mass * healMultiplier < maxMass)
             {
                 rb.mass *= healMultiplier;
+                healSound.Play();
             }
         }
         else if(massRatio < minorDamageThreshold)
         {
             rb.mass *= minorDamageMultiplier;
+            hurtSound.Play();
         }
         else if(massRatio < majorDamageThreshold)
         {
             rb.mass *= majorDamageMultiplier;
+            hurtSound.Play();
         }
         else //other is basically your size or bigger
         {
@@ -126,6 +138,7 @@ public class PlayerHealth : MassCollision
 
     private void Die()
     {
+        deadSound.Play();
         Debug.Log("DEATH");
         gameObject.SetActive(false);
     }
