@@ -5033,8 +5033,8 @@ MonoBehaviour:
   minMass: 40
   damageThreshold: 0.8
   damageMultiplier: 0.5
-  healThreshold: 0.45
-  healMultiplier: 1.1
+  healThreshold: 0.35
+  healMultiplier: 1.07
   minorDamageThreshold: 0.5
   minorDamageMultiplier: 0.95
   majorDamageThreshold: 0.8
