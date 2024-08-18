@@ -170,7 +170,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 3
   m_Sprite: {fileID: 2412343869090161916, guid: f82989b9f9e63a84d8bc228ae24de66b, type: 3}
-  m_Color: {r: 0.33361518, g: 0.4811321, b: 0.47490984, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -284,6 +284,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMass: 800
-  minMass: 150
+  minMass: 100
   damageThreshold: 2
   damageMultiplier: 1
