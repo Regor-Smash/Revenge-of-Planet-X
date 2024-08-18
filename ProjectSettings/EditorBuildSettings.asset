@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: b9735acd46d7c0c488bb09a4834012fb
   - enabled: 1
+    path: Assets/Scenes/tutorila.unity
+    guid: 057a61012e547804b93fad469ad9a40d
+  - enabled: 1
     path: Assets/Scenes/IcyBelt.unity
     guid: 3c289bdf2dd190d468d3eb021b36f91d
   - enabled: 1
