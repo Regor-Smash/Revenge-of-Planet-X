@@ -4,7 +4,8 @@ using UnityEngine;
 public class MassScale : MonoBehaviour
 {
     [SerializeField]
-    private const float scaleFactor = 0.01f;
+    private float defaultMass = 100f;
+    private float scaleFactor { get { return 1f/defaultMass; } }
     protected Rigidbody2D rb;
 
     private void Start()
