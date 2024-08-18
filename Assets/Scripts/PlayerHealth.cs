@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerHealth : MassCollision
 {
     //Health is tracked as the mass of the player
+    private static float massScore;
+    public static float Score { get { return massScore * 10; } }
 
     #region HealthVariables
     [SerializeField]
@@ -110,6 +112,7 @@ public class PlayerHealth : MassCollision
             return;
         }
 
+        massScore = rb.mass;
         lastDamaged = Time.time;
         ChangeSprite();
     }
