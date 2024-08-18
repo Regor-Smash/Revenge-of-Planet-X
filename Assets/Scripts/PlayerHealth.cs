@@ -1,11 +1,12 @@
 using UnityEngine;
 
+[RequireComponent(typeof(SpriteRenderer))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerHealth : MassCollision
 {
     //Health is tracked as the mass of the player
 
-    #region Variables
+    #region HealthVariables
     [SerializeField]
     float healThreshold = 0.25f;
     [SerializeField]
@@ -25,9 +26,36 @@ public class PlayerHealth : MassCollision
     float ExtraLifeHealth = 300;
     #endregion
 
+    [SerializeField]
+    private Sprite[] healthSprites; //Lowest first
+    private SpriteRenderer healthRenderer;
+
+    [SerializeField]
     private float damageInterval = 1f;
+
     private float lastDamaged = 0f;
     private float nextDamage { get { return lastDamaged + damageInterval; } }
+
+    private new void Start()
+    {
+        base.Start();
+        healthRenderer = GetComponent<SpriteRenderer>();
+        ChangeSprite();
+    }
+
+#if UNITY_EDITOR
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Equals))
+        {
+            ChangeMass(1f);
+        }
+        if (Input.GetKeyDown(KeyCode.Minus))
+        {
+            ChangeMass((rb.mass*majorDamageThreshold)-1);
+        }
+    }
+#endif
 
     protected override void ChangeMass(float otherMass)
     {
@@ -61,9 +89,39 @@ public class PlayerHealth : MassCollision
             else
             {
                 Die();
+                return;
             }
         }
+        if(rb.mass < minMass)
+        {
+            Die();
+            return;
+        }
+
         lastDamaged = Time.time;
+        ChangeSprite();
+    }
+
+    private float HealthPercent()
+    {
+        float result = (rb.mass - minMass) / (maxMass - minMass);
+        //Debug.Log(rb.mass.ToString() + " is " + (result * 100f).ToString() + "% of health.");
+        return result;
+    }
+
+    private void ChangeSprite()
+    {
+        float healthPerc = HealthPercent();
+
+        for (int i = 0; i < healthSprites.Length; i++)
+        {
+            float threshold = (i + 1f) / healthSprites.Length;
+            if(healthPerc < threshold)
+            {
+                healthRenderer.sprite = healthSprites[i];
+                return;
+            }
+        }
     }
 
     private void Die()

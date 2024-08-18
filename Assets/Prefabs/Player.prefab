@@ -4843,7 +4843,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4929671358943998952}
   - component: {fileID: 4943668017597557861}
-  - component: {fileID: 434463361742164756}
+  - component: {fileID: 165876348002906411}
+  - component: {fileID: 4405207999351991519}
   - component: {fileID: 110628423448294274}
   - component: {fileID: 6040111545316265744}
   - component: {fileID: 1748220830081919248}
@@ -4926,8 +4927,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &434463361742164756
-CircleCollider2D:
+--- !u!70 &165876348002906411
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5038,3 +5039,9 @@ MonoBehaviour:
   majorDamageThreshold: 0.8
   majorDamageMultiplier: 0.8
   ExtraLifeHealth: 300
+  healthSprites:
+  - {fileID: 3266161464738024703, guid: ab91ed049b408174a9cfd0c19e3978ef, type: 3}
+  - {fileID: 4561592703230080244, guid: 8ee3f63f835b60d43b66d108ad0a2df7, type: 3}
+  - {fileID: -5604322537788878869, guid: a15aed8d788cb38458efa1fbdafe2f6e, type: 3}
+  - {fileID: 1667239884446879212, guid: f0f4b9f3c9534054295db1d9c681a89b, type: 3}
+  damageInterval: 1
