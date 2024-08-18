@@ -16,7 +16,7 @@ public class MassCollision : MonoBehaviour
     [SerializeField]
     private float damageMultiplier = 0.5f;
 
-    private void Start()
+    protected void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
